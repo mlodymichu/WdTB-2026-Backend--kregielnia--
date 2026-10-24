@@ -3,8 +3,8 @@
 -- LAB 02: dopiszcie dane do swoich tabel (kolejność: najpierw tabele, na które wskazują klucze obce).
 insert into user_account (email, display_name, role, created_at) values
     ('ola@student.merito.pl',   'Ola',   'USER',    current_timestamp),
-    ('kuba@student.merito.pl',  'Kuba',  'USER',    current_timestamp),
-    ('firma@example.com',       'Firma', 'PARTNER', current_timestamp),
+    ('kuba@student.merito.pl',  'Oliwier',  'USER',    current_timestamp),
+    ('firma@example.com',       'Igor', 'USER', current_timestamp),
     ('admin@example.com',       'Admin', 'ADMIN',   current_timestamp);
 
 -- LAB 01: Wasze konta (zmieńcie na swoje dane, rola USER)

@@ -9,12 +9,11 @@
         <version>3.5.14</version>
         <relativePath/>
     </parent>
-
     <groupId>pl.wsb</groupId>
     <!-- LAB 01: dopisz nazwę projektu (taką samą jak pakiet pl.wsb.<nazwaprojektu>), np. wdtb-2026-backend-kawiarnia -->
     <artifactId>wdtb-2026-backend</artifactId>
     <!-- LAB 01: wpisz numery indeksów osób z zespołu, np. 1.0.0-123456-123457-123458 (reguła R1.05) -->
-    <version>1.0.0-NRINDEKSU1-NRINDEKSU2-NRINDEKSU3</version>
+    <version>1.0.0-113141-113646-90368</version>
     <name>WdTB-2026-Backend</name>
     <description>Projekt zespołowy z przedmiotu Wprowadzenie do technologii backendowych (WdTB)</description>
 
@@ -34,6 +33,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.34</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.h2database</groupId>
