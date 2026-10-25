@@ -1,4 +1,4 @@
-package pl.wsb.kregielnia.client.domain;
+package pl.wsb.kregielnia.clients;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

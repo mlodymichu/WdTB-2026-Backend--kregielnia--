@@ -8,7 +8,8 @@ insert into user_account (email, display_name, role, created_at) values
 -- LAB 02: dopiszcie dane do swoich tabel (kolejność: najpierw tabele, na które wskazują klucze obce).
 
 -- ===== LAB 02 · <tabela 1> =====
-
+insert into products (cena, id_produktu, nazwa_produktu, kategoria_prod) values
+('12.00',   1,   'Frytki',    'PRZEKASKI');
 -- ===== LAB 02 · <tabela 2> =====
 
 -- ===== LAB 02 · <tabela 3> =====
