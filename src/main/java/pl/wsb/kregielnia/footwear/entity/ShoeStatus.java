@@ -1,4 +1,4 @@
-package pl.wsb.kregielnia.footwear.domain;
+package pl.wsb.kregielnia.footwear.entity;
 
 public enum ShoeStatus {
     DOSTEPNE,

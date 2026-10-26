@@ -1,4 +1,4 @@
-package pl.wsb.kregielnia.clients;
+package pl.wsb.kregielnia.clients.entity;
 
 public enum ClientDiscount {
     STANDARD,

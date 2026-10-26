@@ -1,4 +1,4 @@
-package pl.wsb.kregielnia.products.domain;
+package pl.wsb.kregielnia.products.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -30,13 +30,21 @@ public class Products {
     @Column(name = "cena", nullable = false, precision = 10, scale = 2)
     private BigDecimal cena;
 
+    @Column(name = "opis_produktu", length = 255)
+    private String opisProduktu;
+
+    @Column(name = "dostepny", nullable = false)
+    private Boolean dostepny;
+
     protected Products() {
     }
 
-    public Products(String nazwaProduktu, ProductCategory kategoriaProd, BigDecimal cena) {
+    public Products(String nazwaProduktu, ProductCategory kategoriaProd, BigDecimal cena, String opisProduktu, Boolean dostepny) {
         this.nazwaProduktu = nazwaProduktu;
         this.kategoriaProd = kategoriaProd;
         this.cena = cena;
+        this.opisProduktu = opisProduktu;
+        this.dostepny = dostepny;
     }
 
     public Long getIdProduktu() {
@@ -53,5 +61,13 @@ public class Products {
 
     public BigDecimal getCena() {
         return cena;
+    }
+
+    public String getOpisProduktu() {
+        return opisProduktu;
+    }
+
+    public Boolean getDostepny() {
+        return dostepny;
     }
 }

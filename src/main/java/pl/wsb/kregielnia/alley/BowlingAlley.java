@@ -1,4 +1,4 @@
-package pl.wsb.kregielnia.alley.domain;
+package pl.wsb.kregielnia.alley.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -25,12 +25,20 @@ public class BowlingAlley {
     @Column(name = "status", nullable = false, length = 30)
     private AlleyStatus status;
 
+    @Column(name = "nazwa_toru", length = 50)
+    private String nazwaToru;
+
+    @Column(name = "czy_dla_dzieci", nullable = false)
+    private Boolean czyDlaDzieci;
+
     protected BowlingAlley() {
     }
 
-    public BowlingAlley(Integer numerAlejki, AlleyStatus status) {
+    public BowlingAlley(Integer numerAlejki, AlleyStatus status, String nazwaToru, Boolean czyDlaDzieci) {
         this.numerAlejki = numerAlejki;
         this.status = status;
+        this.nazwaToru = nazwaToru;
+        this.czyDlaDzieci = czyDlaDzieci;
     }
 
     public Long getIdAlejki() {
@@ -43,5 +51,13 @@ public class BowlingAlley {
 
     public AlleyStatus getStatus() {
         return status;
+    }
+
+    public String getNazwaToru() {
+        return nazwaToru;
+    }
+
+    public Boolean getCzyDlaDzieci() {
+        return czyDlaDzieci;
     }
 }

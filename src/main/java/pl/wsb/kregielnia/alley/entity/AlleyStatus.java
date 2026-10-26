@@ -1,4 +1,4 @@
-package pl.wsb.kregielnia.alley.domain;
+package pl.wsb.kregielnia.alley.entity;
 
 public enum AlleyStatus {
     DOSTEPNY,

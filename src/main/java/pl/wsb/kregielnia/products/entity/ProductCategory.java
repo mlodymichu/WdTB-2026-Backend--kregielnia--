@@ -1,4 +1,4 @@
-package pl.wsb.kregielnia.products.domain;
+package pl.wsb.kregielnia.products.entity;
 
 public enum ProductCategory {
     PRZEKASKI,

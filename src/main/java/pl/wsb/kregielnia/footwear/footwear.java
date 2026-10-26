@@ -1,4 +1,4 @@
-package pl.wsb.kregielnia.footwear.domain;
+package pl.wsb.kregielnia.footwear.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -11,7 +11,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "footwear")
-public class Footwear {
+public class footwear {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,7 +19,7 @@ public class Footwear {
     private Long idObuwia;
 
     @Column(name = "rozmiar", nullable = false)
-    private Double rozmiar; // Używamy Double, żeby obsłużyć np. połówki rozmiarów (np. 42.5)
+    private Double rozmiar;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "dostepnosc", nullable = false, length = 30)
@@ -28,13 +28,18 @@ public class Footwear {
     @Column(name = "id_rezerwacji")
     private Long idRezerwacji;
 
-    protected Footwear() {
+    @Enumerated(EnumType.STRING)
+    @Column(name = "plec", nullable = false, length = 20)
+    private ShoeGender plec; // Ostatnia kolumna określająca płeć
+
+    protected footwear() {
     }
 
-    public Footwear(Double rozmiar, ShoeStatus dostepnosc, Long idRezerwacji) {
+    public footwear(Double rozmiar, ShoeStatus dostepnosc, Long idRezerwacji, ShoeGender plec) {
         this.rozmiar = rozmiar;
         this.dostepnosc = dostepnosc;
         this.idRezerwacji = idRezerwacji;
+        this.plec = plec;
     }
 
     public Long getIdObuwia() {
@@ -51,5 +56,9 @@ public class Footwear {
 
     public Long getIdRezerwacji() {
         return idRezerwacji;
+    }
+
+    public ShoeGender getPlec() {
+        return plec;
     }
 }

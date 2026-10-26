@@ -1,6 +1,7 @@
-package pl.wsb.kregielnia.reservation;
+package pl.wsb.kregielnia.reservation.entity;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -39,16 +40,21 @@ public class Reservation {
     @Column(name = "id_zamowienia")
     private Long idZamowienia;
 
+    // --- TUTAJ DODAJEMY KLASĘ WBUDZOWANĄ ---
+    @Embedded
+    private ReservationPeriod reservationPeriod;
+
     protected Reservation() {
     }
 
-    public Reservation(Long idToru, LocalDateTime timestamp, String daneKlienta, ReservationStatus statusRezerwacji, Long idKlienta, Long idZamowienia) {
+    public Reservation(Long idToru, LocalDateTime timestamp, String daneKlienta, ReservationStatus statusRezerwacji, Long idKlienta, Long idZamowienia, ReservationPeriod reservationPeriod) {
         this.idToru = idToru;
         this.timestamp = timestamp;
         this.daneKlienta = daneKlienta;
         this.statusRezerwacji = statusRezerwacji;
         this.idKlienta = idKlienta;
         this.idZamowienia = idZamowienia;
+        this.reservationPeriod = reservationPeriod;
     }
 
     public Long getIdRezewacji() {
@@ -77,5 +83,9 @@ public class Reservation {
 
     public Long getIdZamowienia() {
         return idZamowienia;
+    }
+
+    public ReservationPeriod getReservationPeriod() {
+        return reservationPeriod;
     }
 }

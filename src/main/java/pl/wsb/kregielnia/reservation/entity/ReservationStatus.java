@@ -1,4 +1,4 @@
-package pl.wsb.kregielnia.reservation;
+package pl.wsb.kregielnia.reservation.entity;
 
 public enum ReservationStatus {
     OCZEKUJACA,

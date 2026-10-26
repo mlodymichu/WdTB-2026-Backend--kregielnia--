@@ -1,4 +1,4 @@
-package pl.wsb.kregielnia.orders;
+package pl.wsb.kregielnia.orders.entity;
 
 public enum OrderStatus {
     NOWE,
